@@ -1,0 +1,5 @@
+﻿Noem 5 ingebouwde gegevenstypen van c# : String, Int, Float, Char, Bool
+Voor welke .net core-klassen zijn dat aliassen? system.string, system.int32, system.single, system.char, system.boolean
+Geef een voorbeeld van een expression.( var som = som * 2; ) geef ook een voorbeeld van code die geen expression is. ( var som = 5 + 5; ) 
+wat is een operator?( operators zijn de symbolen die bewerkingen zoals vermenigvuldigen en delen of vergelijkingen vertegenwoordigen. ) geef vier voorbeelden van operators. ( + - * / )
+beschrijf de hiërachische structuur waaruit een c#-programma in de basis is opgebouwd.( blokken, Methods, classes en typen, namespaces )
