@@ -1,0 +1,69 @@
+Sectie 4
+
+Vraag 1, B
+
+Vraag 2, A
+
+Vraag 3, C
+
+Vraag 4, A
+
+Vraag 5, B
+
+Vraag 6, A
+
+Vraag 7, D
+
+Vraag 8, A
+
+
+Opdracht 1, 
+
+SELECT CONCAT(first_name, ' ', last_name) AS Naam, LOWER(CONCAT(SUBSTring(email, 1, 1),'.',SUBSTring(email, 2, 20), '@company.com'))
+from employees
+
+Opdracht 2, 
+
+SELECT job_title AS old_name, REPLACE( job_title, 'Manager', 'Director')
+FROM jobs
+
+Opdracht 3, 
+
+SELECT CONCAT(first_name, ' ', last_name) AS Naam, LOWER(CONCAT(SUBSTring(email, 1, 1),SUBSTring(email, 2, 1) )) AS inlognaam
+from employees
+ORDER BY last_name
+
+Opdracht 4, 
+
+SELECT last_name, Salary AS maandsalaris, Salary / (36 * 4),  ROUND(Salary / (36 * 4), 0)
+from employees
+ORDER BY last_name
+
+Opdracht 5, 
+
+SELECT employee_id, job_id, start_date AS Startdatum, end_date  AS Einddatum , DATEDIFF(YEAR, start_date, end_date) as Jaren,
+DATEDIFF(MONTH, start_date, end_date) as Maanden
+FROM job_history
+ORDER BY employee_id
+
+Opdracht 6, 
+
+SELECT CONCAT(first_name, ' ', last_name) AS Naam, DATEDIFF(YEAR, hire_date, GETDATE()) 
+FROM employees
+WHERE last_name NOT LIKE 'kin%'
+ORDER BY DATEDIFF(YEAR, hire_date, GETDATE()) DESC
+
+Opdracht 7, 
+
+SELECT  COUNT(*)
+FROM employees
+
+Opdracht 8, 
+
+SELECT  CONCAT(first_name, ' ', last_name) AS Naam, job_id ,Salary ,Salary / 100 *1.25 ,Salary / 100 * 1.25 + salary
+FROM employees
+WHERE job_id LIKE 'SA_%'
+ORDER BY last_name
+
+
+

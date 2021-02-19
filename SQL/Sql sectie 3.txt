@@ -1,0 +1,80 @@
+Sectie 3 
+
+Vraag 1, B
+
+Vraag 2, A
+
+Vraag 3, A (Het werkt zolang je geen ; aan het eind hebt)
+
+Vraag 4, C,  order by moet op last_name
+
+Vraag 5, A
+
+Vraag 6, A
+
+Vraag 7, B
+
+Vraag 8, A
+
+Vraag 9, A
+
+Vraag 10, A
+
+Opdracht 1, 
+
+SELECT CONCAT(first_name, ' ', last_name) AS Naam, job_id, Salary
+FROM employees
+WHERE job_id LIKE  'ST_CLER%'  AND Salary >= 3000
+ORDER BY Salary
+
+Opdracht 2, 
+
+SELECT city, country_id
+FROM locations
+where country_id LIKE 'CA%' OR country_id LIKE 'UK%' 
+
+Opdracht 3, 
+
+SELECT job_title, min_salary, max_salary, max_salary - min_salary verschil
+FROM jobs
+WHERE job_title NOT LIKE 'Presiden%' 
+ORDER BY verschil
+
+Opdracht 4, 
+
+SELECT employee_id, last_name, salary
+from employees
+WHERE department_id IS NOT NULL AND department_id NOT IN(10,20,50) AND 
+salary < 10000
+ORDER BY salary DESC
+
+Opdracht 5, 
+
+SELECT manager_id
+FROM employees
+WHERE manager_id NOT IN(100,102, 103, 201, 205)
+GROUP BY manager_id
+
+Opdracht 6, 
+
+SELECT employee_id, last_name
+FROM employees
+WHERE  last_name >= 'F%' 
+ORDER BY last_name
+
+Opdracht 7, 
+
+SELECT first_name, last_name, Salary
+FROM employees
+WHERE  Salary >= 12000 AND Salary <= 20000 
+ORDER BY salary 
+
+Opdracht 8, 
+
+Bonus bestaat niet dus heb ik niet gemaakt
+
+Opdracht 9, 
+
+SELECT CONCAT(first_name, ' ', last_name) AS Naam, email, phone_number
+WHERE phone_number IS NOT '%5%'
+ORDER BY Salary
